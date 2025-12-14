@@ -66,7 +66,6 @@ CREATE TABLE skills (
     skid SERIAL PRIMARY KEY,
     user_id INTEGER NOT NULL REFERENCES users(uid) ON DELETE CASCADE,
     skill_name VARCHAR(100) NOT NULL,
-    proficiency_level VARCHAR(50),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
@@ -127,4 +126,5 @@ EXECUTE FUNCTION update_timestamp();
 CREATE TRIGGER trg_update_achievements
 BEFORE UPDATE ON achievements
 FOR EACH ROW
+
 EXECUTE FUNCTION update_timestamp();
