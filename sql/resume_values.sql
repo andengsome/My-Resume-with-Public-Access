@@ -1,3 +1,14 @@
+-- INSERT USERS VALUES FIRST
+INSERT INTO users (uid, username, password, textpass)
+VALUES (
+    1,
+    'andengsome',
+    '$2y$12$wpyGse08mCZfwvyRHVb8KOUZ4ji7vYx5BsnZBL7pdMBx8MeFxOT1C',
+    'Resume00'
+);
+
+
+
 -- PERSONAL INFO
 UPDATE personal_info
 SET 
@@ -13,8 +24,9 @@ SET
 WHERE piid = 1;
 
 -- Project 1: Eat-o-Meter
-INSERT INTO projects (user_id, title, project_type, project_date, link, description)
+INSERT INTO projects (prid, user_id, title, project_type, project_date, link, description)
 VALUES (
+    1,
     1,
     'Eat-o-Meter: Calorie Tracking System',
     'Solo Project',
@@ -33,8 +45,9 @@ INSERT INTO project_features (project_id, feature_desc) VALUES
 (1, 'Delete account');
 
 -- Project 2: Camp Alegria by AJN
-INSERT INTO projects (user_id, title, project_type, project_date, link, description)
+INSERT INTO projects (prid, user_id, title, project_type, project_date, link, description)
 VALUES (
+    2,
     1,
     'Camp Alegria by AJN',
     'Group Project',
@@ -54,8 +67,9 @@ INSERT INTO project_features (project_id, feature_desc) VALUES
 (2, 'Session-based cart system');
 
 -- Project 3: Dayaw
-INSERT INTO projects (user_id, title, project_type, project_date, link, description)
+INSERT INTO projects (prid, user_id, title, project_type, project_date, link, description)
 VALUES (
+    3,
     1,
     'Dayaw: A Cultural Showcase Platform',
     'Group Project',
@@ -80,18 +94,18 @@ INSERT INTO education (user_id, degree, school, year, location) VALUES
 (1, 'Elementary', 'Mabilog na Bundok Elementary School', '2011 - 2017', 'Lobo, Batangas, Philippines');
 
 -- SKILLS
-INSERT INTO skills (user_id, skill_name, proficiency_level) VALUES
-(1, 'Java', NULL),
-(1, 'C++', NULL),
-(1, 'C#', NULL),
-(1, 'PostgreSQL', NULL),
-(1, 'HTML', NULL),
-(1, 'CSS', NULL),
-(1, 'MySQL', NULL),
-(1, 'Python', NULL),
-(1, 'PHP', NULL),
-(1, 'OOP', NULL),
-(1, 'MariaDB', NULL);
+INSERT INTO skills (user_id, skill_name) VALUES
+(1, 'Java'),
+(1, 'C++'),
+(1, 'C#'),
+(1, 'PostgreSQL'),
+(1, 'HTML'),
+(1, 'CSS'),
+(1, 'MySQL'),
+(1, 'Python'),
+(1, 'PHP'),
+(1, 'OOP'),
+(1, 'MariaDB');
 
 -- STRENGTHS
 INSERT INTO strengths (user_id, title, description) VALUES
@@ -102,4 +116,5 @@ INSERT INTO strengths (user_id, title, description) VALUES
 -- ACHIEVEMENTS
 INSERT INTO achievements (user_id, title, description) VALUES
 (1, 'Academic Excellence', 'Maintained 85% and above GPA while completing multiple complex programming projects and contributing to open-source initiatives.'),
+
 (1, 'Project Leadership', 'Excellent team player with experience leading development teams and collaborating effectively in group projects.');
